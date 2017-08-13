@@ -11803,7 +11803,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 载入此项目所需要的库</span>
@@ -11827,7 +11827,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 载入波士顿房屋的数据集</span>
@@ -11894,25 +11894,25 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO 1</span>
 
 <span class="c1">#目标：计算价值的最小值</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的最大值</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的平均值</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的中值</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的标准差</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：输出计算的结果</span>
 <span class="k">print</span> <span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -11943,7 +11943,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -12029,9 +12029,8 @@ Standard deviation of prices: $165,340.28
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-2---&#22238;&#31572;:">&#38382;&#39064; 2 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-2---&#22238;&#31572;:">&#194;&#182;</a></h3><ol>
-<li>可以用测试集来检验机器学习算法的效果。</li>
-<li>因用训练集训练的模型，用它来测试没有任何作用。</li>
-<li>有可能出现过拟合。</li>
+<li>测试集可以用来评估模型的性能，并且这些数据都是真实，评估出来的结果是比较可靠的。如果没有数据进行测试，会使得我们无法无法判断模型的效果。 因用训练集训练的模型，用它来测试没有任何作用。可以用来检查模型是否过度拟合，如果该模型训练评分很高，而测试评分很低，则该模型可能是过度拟合了。</li>
+<li>如果采用训练集的数据进行测试有可能会导致训练分数特别高，但是实际预测结果并不好的过拟合现象。</li>
 </ol>
 
 </div>
@@ -13811,7 +13810,7 @@ UUWJT0REosr/B5f1i6xvPigVAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-7---&#22238;&#31572;:">&#38382;&#39064; 7 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-7---&#22238;&#31572;:">&#194;&#182;</a></h3><ol>
 <li>网格搜索算法是一种通过遍历给定的参数组合来优化模型表现的方法。</li>
-<li>通过遍历参数得到最优的值，来优化模型参数。</li>
+<li>通过遍历参数并使用交叉验证得到验证分数最优的值，来得到最合适的模型参数。</li>
 </ol>
 
 </div>
@@ -13837,10 +13836,10 @@ UUWJT0REosr/B5f1i6xvPigVAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#38382;&#39064; 8 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><ol>
-<li>将原始数据分成K组（一般是均分），将每个子集数据分别做一次验证集，其余的K-1组子集数据作为训练集，这样会得到K个模型，用这K个模型最终的验证集的分类准确率的平均数作为此K-CV下分类器的性能指标。</li>
-<li>使用不同参数，并用K fold交叉验证。</li>
-<li>dict of numpy (masked) ndarrays</li>
-<li>不使用交叉验证可能出现偏差较大，可能是数据集造成结果的影响，而不是参数。使用交叉验证那么将数据集造成的影响降到最低。</li>
+<li>将训练数据分成K组（一般是均分），将每个子集数据分别做一次验证集，其余的K-1组子集数据作为训练集，这样会得到K个模型，用这K个模型最终的验证集的分类或回归等准确率的平均数作为此K-CV下分类器的性能指标。</li>
+<li>通过遍历给定的参数组合，每组参数，使用交叉验证来计算出验证分数，并得到最优的参数值。</li>
+<li>一个可以被导入pandas DataFrame的字典，该字典keys作为表头，values作为表的内容。</li>
+<li>不使用交叉验证可能出现偏差较大，可能是数据集造成结果的影响（例如一些异常数据全部被分到验证集中，导致模型评分特别低），而不是参数。使用交叉验证那么将数据集造成的影响降到最低。</li>
 </ol>
 
 </div>
@@ -14048,7 +14047,8 @@ Parameter &#39;max_depth&#39; is 3 for the optimal model.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#38382;&#39064; 9 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p>Parameter 'max_depth' is 3 for the optimal model.</p>
+<h3 id="&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#38382;&#39064; 9 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p>Parameter 'max_depth' is 3 for the optimal model.
+之前第6题预测的是4, 有一定的偏差，说明直觉预测还是有一定的问题。</p>
 
 </div>
 </div>
@@ -14152,6 +14152,8 @@ Predicted selling price for Client 3&#39;s home: $898,315.38
 <li>客户1: \$383,896.15</li>
 <li>客户2: \$281,806.45</li>
 <li>客户3: \$898,315.38</li>
+<li>合理性分析：这三组数据都在之前计算的最小值和最大值之间，并且接近平均值，所以趋于合理。
+符合房间数越高越贵，贫困指数越低越贵，学生老师比例越低越贵的趋势。</li>
 </ol>
 
 </div>
